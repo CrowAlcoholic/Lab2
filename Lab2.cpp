@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <iostream>
 
 int main() {
@@ -190,7 +191,8 @@ int main() {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target4.first >> target4.second;
     }
-    if (std::abs(queen.first - target4.second) == (queen.second - target4.first)) {
+    if ((queen.first - target4.second) == (queen.second - target4.first)
+        || (queen.first - target4.second) == -(queen.second - target4.first)) {
         std::cout << "Danger!!! queen can hit " << target4.first << target4.second << std::endl;
     }
     else
