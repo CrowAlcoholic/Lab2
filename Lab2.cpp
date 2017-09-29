@@ -9,7 +9,8 @@ int main() {
     if ((x1 % 2 == 1) && (y1 % 2 == 1))
     {
         std::cout << "Both numbers are not even" << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "At least one number is even" << std::endl;
     }
@@ -21,7 +22,8 @@ int main() {
     if ((x2 < 20) && (y2 >= 20) || ((x2 >= 20) && (y2 < 20)))
     {
         std::cout << "Only one number is less than 20" << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "Both numbers are less than 20 or more than 20 " << std::endl;
     }
@@ -33,7 +35,8 @@ int main() {
     if ((x3 == 0) || (y3 == 0))
     {
         std::cout << "At least one number is 0" << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "Both numbers are not 0" << std::endl;
     }
@@ -46,7 +49,8 @@ int main() {
     if ((x4 < 0) && (y4 < 0) && (z4 < 0))
     {
         std::cout << "All numbers are negative" << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "At least one number is positive" << std::endl;
     }
@@ -59,10 +63,12 @@ int main() {
     if ((x5 % 5 == 0) && (y5 % 5 != 0) && (z5 % 5 != 0))
     {
         std::cout << "First number multiples of 5" << std::endl;
-    } else if ((x5 % 5 != 0) && (y5 % 5 == 0) && (z5 % 5 != 0))
+    }
+    else if ((x5 % 5 != 0) && (y5 % 5 == 0) && (z5 % 5 != 0))
     {
         std::cout << "Second number multiples of 5" << std::endl;
-    } else if ((x5 % 5 != 0) && (y5 % 5 != 0) && (z5 % 5 == 0))
+    }
+    else if ((x5 % 5 != 0) && (y5 % 5 != 0) && (z5 % 5 == 0))
     {
         std::cout << "Third number multiples of 5" << std::endl;
     }
@@ -79,10 +85,12 @@ int main() {
     if ((x6 > 100) && (y6 <= 100) && (z6 <= 100))
     {
         std::cout << "First number is more than 100" << std::endl;
-    } else if ((x6 <= 100) && (y6 > 100) && (z6 <= 100))
+    }
+    else if ((x6 <= 100) && (y6 > 100) && (z6 <= 100))
     {
         std::cout << "Second number is more than 100" << std::endl;
-    } else if ((x6 <= 100) && (y6 <= 100) && (z6 > 100))
+    }
+    else if ((x6 <= 100) && (y6 <= 100) && (z6 > 100))
     {
         std::cout << "Third number is more than 100" << std::endl;
     }
@@ -101,7 +109,8 @@ int main() {
     // /
     if ((rook.first == target1.first) || (rook.second == target1.second)) {
         std::cout << "Danger!!! rook can hit " << target1.first << target1.second << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "Chill, rook can't hit " << target1.first << target1.second << std::endl;
     }
@@ -116,7 +125,8 @@ int main() {
     // /
     if ((rook.first == target2.first) || (rook.second == target2.second)) {
         std::cout << "Danger!!! bishop can hit " << target2.first << target2.second << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "Chill, bishop can't hit " << target2.first << target2.second << std::endl;
     }
