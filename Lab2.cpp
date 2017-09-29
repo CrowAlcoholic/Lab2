@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <iostream>
 
 int main() {
@@ -110,7 +111,8 @@ int main() {
         std::cout << "a, b must be > 0 and < 8. Enter a,b for rook again" << std::endl;
         std::cin >> rook.first >> rook.second;
     }
-    while ((0 > target1.first) || (target1.first > 8) || (0 > target1.second) || (target1.second > 8))
+    while ((0 > target1.first) || (target1.first > 8)
+        || (0 > target1.second) || (target1.second > 8))
     {
         std::cout << "c, d must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target1.first >> target1.second;
@@ -121,7 +123,7 @@ int main() {
     else
     {
     std::cout << "Chill, rook can't hit " << target1.first << target1.second << std::endl;
-    } 
+    }
     ///////////////////////////////////////////////////////////////////////////////////////// 8
     std::cout << "8) enter a,b for bishop" << std::endl;
     std::pair<int, int> bishop;
@@ -134,12 +136,13 @@ int main() {
         std::cout << "a must be > 0 and < 8. Enter a,b for bishop again" << std::endl;
         std::cin >> bishop.first >> bishop.second;
     }
-    while ((0 > target2.first) || (target2.first > 8) || (0 > target2.second) || (target2.second > 8))
+    while ((0 > target2.first) || (target2.first > 8) 
+        || (0 > target2.second) || (target2.second > 8))
     {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target2.first >> target2.second;
     }
-    if ((bishop.first - target2.second) == (bishop.second - target2.first) 
+    if ((bishop.first - target2.second) == (bishop.second - target2.first)
         || (bishop.first - target2.second) == -(bishop.second - target2.first)) {
         std::cout << "Danger!!! bishop can hit " << target2.first << target2.second << std::endl;
     }
@@ -159,7 +162,7 @@ int main() {
         std::cout << "a must be > 0 and < 8. Enter a,b for king again" << std::endl;
         std::cin >> king.first >> king.second;
     }
-    while ((0 > target3.first) || (target3.first > 8) 
+    while ((0 > target3.first) || (target3.first > 8)
     || (0 > target3.second) || (target3.second > 8))
     {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
@@ -180,20 +183,19 @@ int main() {
     std::cout << "enter c,d for target" << std::endl;
     std::pair<int, int> target4;
     std::cin >> target4.first >> target4.second;
-    while ((0 > queen.first) || (queen.first > 8) || (0 > queen.second) || (queen.second > 8)
-        )
+    while ((0 > queen.first) || (queen.first > 8) || (0 > queen.second) || (queen.second > 8))
     {
         std::cout << "a must be > 0 and < 8. Enter a,b for queen again" << std::endl;
         std::cin >> queen.first >> queen.second;
     }
-    while ((0 > target4.first) || (target4.first > 8) 
+    while ((0 > target4.first) || (target4.first > 8)
     || (0 > target4.second) || (target4.second > 8))
     {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target4.first >> target4.second;
     }
     if ((queen.first - target4.second) == (queen.second - target4.first) 
-        || (queen.first - target4.second) == -(queen.second - target4.first) 
+        || (queen.first - target4.second) == -(queen.second - target4.first)
         || (queen.first == target4.first) || (queen.second == target4.second)) {
         std::cout << "Danger!!! queen can hit " << target4.first << target4.second << std::endl;
     }
@@ -208,8 +210,7 @@ int main() {
     std::cout << "enter c,d for target" << std::endl;
     std::pair<int, int> target5;
     std::cin >> target5.first >> target5.second;
-    while ((0 > pawn.first) || (pawn.first > 8) || (0 > pawn.second) || (pawn.second > 8)
-        )
+    while ((0 > pawn.first) || (pawn.first > 8) || (0 > pawn.second) || (pawn.second > 8))
     {
         std::cout << "a must be > 0 and < 8. Enter a,b for bishop again" << std::endl;
         std::cin >> pawn.first >> pawn.second;
@@ -220,7 +221,7 @@ int main() {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target5.first >> target5.second;
     }
-    if ((target5.first == pawn.first + 1) && (target5.second == pawn.second))// i
+    if ((target5.first == pawn.first + 1) && (target5.second == pawn.second))  // i
     {
         std::cout << "The pawn can reach the target in one turn" << std::endl;
     }
@@ -229,14 +230,14 @@ int main() {
         std::cout << "The pawn can reach the target in one turn" << std::endl;
     }
     else if ((target5.first == pawn.first + 1) && ((target5.second == pawn.second + 1)
-        || (target5.second == pawn.second - 1)))// ii
+        || (target5.second == pawn.second - 1)))  // ii
     {
         std::cout << "The pawn can reach the target in one turn" << std::endl;
     }
     else
     {
         std::cout << "The pawn can't reach the target in one turn" << std::endl;
-    } 
+    }
     //////////////////////////////////////////////////////////////////////////////////////// 12
     std::cout << "12)" << std::endl;
     const int factor = 7;
@@ -261,7 +262,7 @@ int main() {
         std::cin >> a14;
     }
     unsigned int mult14 = 1;
-    for (unsigned int i = a14 ;i < 21; ++i)
+    for (unsigned int i = a14; i < 21; ++i)
     {
         mult14 *= i;
     }
@@ -270,7 +271,7 @@ int main() {
     std::cout << "15) Enter a for multiplication from 1 to b (1<b<20)" << std::endl;
     int b15 = 0;
     std::cin >> b15;
-    while ((1 > b15) || (b15 > 20)) 
+    while ((1 > b15) || (b15 > 20))
     {
         std::cout << " b must be from 1 to 20! Enter again" << std::endl;
         std::cin >> b15;
