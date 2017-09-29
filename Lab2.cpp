@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    // 1 
+    // 1
     /* std::cout << "Enter two numbers" << std::endl;
     int x1 = 0;
     int y1 = 0;
@@ -185,7 +185,7 @@ int main() {
         std::cout << "a must be > 0 and < 8. Enter a,b for bishop again" << std::endl;
         std::cin >> queen.first >> queen.second;
     }
-    while ((0 > target4.first) || (target4.first > 8) 
+    while ((0 > target4.first) || (target4.first > 8)
            || (0 > target4.second) || (target4.second > 8))
     {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
