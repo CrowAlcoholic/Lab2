@@ -2,7 +2,7 @@
 
 int main() {
     // 1
-    std::cout << "Enter two numbers" << std::endl;
+   /* std::cout << "Enter two numbers" << std::endl;
     int x1 = 0;
     int y1 = 0;
     std::cin >> x1 >> y1;
@@ -113,22 +113,23 @@ int main() {
     else
     {
         std::cout << "Chill, rook can't hit " << target1.first << target1.second << std::endl;
-    }
+    }*/
     // 8
     std::cout << "enter a,b for bishop" << std::endl;
     std::pair<int, int> bishop;
-    std::cin >> rook.first >> rook.second;
+    std::cin >> bishop.first >> bishop.second;
     // /
     std::cout << "enter c,d for second figure " << std::endl;
     std::pair<int, int> target2;
     std::cin >> target2.first >> target2.second;
     // /
-    if ((rook.first == target2.first) || (rook.second == target2.second)) {
+    if (abs(bishop.first - target2.second) == abs(bishop.second - target2.first)) {
         std::cout << "Danger!!! bishop can hit " << target2.first << target2.second << std::endl;
     }
     else
     {
         std::cout << "Chill, bishop can't hit " << target2.first << target2.second << std::endl;
     }
+
     return 0;
 }
