@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    // 1 
+    // 1
     std::cout << "1) Enter two numbers" << std::endl;
     int x1 = 0;
     int y1 = 0;
