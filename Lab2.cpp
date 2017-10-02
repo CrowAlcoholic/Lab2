@@ -108,7 +108,7 @@ int main() {
         std::cout << "c, d must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target1.first >> target1.second;
     }
-    if ((rook.first == target1.first) || (rook.second == target1.second)) 
+    if ((rook.first == target1.first) || (rook.second == target1.second))
     {
         std::cout << "Danger!!! rook can hit " << target1.first << target1.second << std::endl;
     }
