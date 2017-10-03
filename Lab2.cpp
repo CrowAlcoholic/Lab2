@@ -82,21 +82,13 @@ int main() {
     int y6 = 0;
     int z6 = 0;
     std::cin >> x6 >> y6 >> z6;
-    if ((x6 > 100) && (y6 <= 100) && (z6 <= 100))
+    if ((x6 <= 100) || (y6 <= 100) || (z6 <= 100))
     {
-        std::cout << "First number is more than 100" << std::endl;
-    }
-    else if ((x6 <= 100) && (y6 > 100) && (z6 <= 100))
-    {
-        std::cout << "Second number is more than 100" << std::endl;
-    }
-    else if ((x6 <= 100) && (y6 <= 100) && (z6 > 100))
-    {
-        std::cout << "Third number is more than 100" << std::endl;
+        std::cout << "All numbers are less than 100" << std::endl;
     }
     else
     {
-        std::cout << "All numbers are less than 100" << std::endl;
+        std::cout << "At least one number is more than 100" << std::endl;
     }
     ///////////////////////////////////////////////////////////////////////////////////////// 7
     std::cout << "7) enter a,b for the rook" << std::endl;
@@ -116,12 +108,13 @@ int main() {
         std::cout << "c, d must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target1.first >> target1.second;
     }
-    if ((rook.first == target1.first) || (rook.second == target1.second)) {
-    std::cout << "Danger!!! rook can hit " << target1.first << target1.second << std::endl;
+    if ((rook.first == target1.first) || (rook.second == target1.second))
+    {
+        std::cout << "Danger!!! rook can hit " << target1.first << target1.second << std::endl;
     }
     else
     {
-    std::cout << "Chill, rook can't hit " << target1.first << target1.second << std::endl;
+        std::cout << "Chill, rook can't hit " << target1.first << target1.second << std::endl;
     }
     ///////////////////////////////////////////////////////////////////////////////////////// 8
     std::cout << "8) enter a,b for bishop" << std::endl;
@@ -187,8 +180,8 @@ int main() {
         std::cout << "a must be > 0 and < 8. Enter a,b for queen again" << std::endl;
         std::cin >> queen.first >> queen.second;
     }
-    while ((0 > target4.first) || (target4.first > 8)
-    || (0 > target4.second) || (target4.second > 8))
+    while ((0 > target4.first) || (target4.first > 8) ||
+        (0 > target4.second) || (target4.second > 8))
     {
         std::cout << "b must be > 0 and < 8. Enter c,d for target again" << std::endl;
         std::cin >> target4.first >> target4.second;
